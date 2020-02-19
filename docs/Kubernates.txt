@@ -1,0 +1,79 @@
+# Kubernates
+Kubernates open source orchestration framework for docker.
+
+### About docker
+Docker runtime is the software to run docker images.
+Best use of Docker is: Same binary build and ship run anywhere.
+
+## Setup on Ubuntu
+"Minikube" a tool that runs kubernates locally. Single node kubernates cluster.
+"Kops" is the AWS service used to spin up cluster.
+
+### Install kubernates on ubuntu
+### Kubectl
+URL: https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux
+#Minikube
+https://minikube.sigs.k8s.io/docs/start/linux/
+
+worked for with kvm2
+```
+ 2003  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+ 2004  ls
+ 2005  chmod +x ./kubectl
+ 2006  sudo mv ./kubectl /usr/local/bin/kubectl
+ 2007  kubectl version --client
+ 2008  minikube start
+ 2009  minikube start --vm-driver
+ 2010  virt-host-validate
+ 2011  sudo apt install libvirt-clients
+ 2012  ls
+ 2013  virt-host-validate
+ 2014  egrep -c '(vmx|svm)' /proc/cpuinfo
+ 2015  cat /sys/hypervisor/properties/capabilities
+ 2016  kvm-ok 
+ 2017  sudo apt install cpu-checker
+ 2018  kvm-ok 
+ 2019  egrep -c ' lm ' /proc/cpuinfo
+ 2020  uname -m
+ 2021  sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+ 2022  $ sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+ 2023  sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+ 2024  sudo apt-get update
+ 2025  sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+ 2026  sudo ls -la /var/run/libvirt/libvirt-sock
+ 2027  rmmod kvm
+ 2028  modprobe -a kvm
+ 2029  sudo apt-get install virt-manager
+ 2030  history
+ 2031  sudo minikube start --vm-driver=kvm
+ 2032  sudo minikube start --vm-driver=kvm2
+ 2033  minikube delete
+ 2034  sudo minikube delete
+ 2035  sudo minikube start --vm-driver=kvm2
+ 2036  minikube start --vm-driver=kvm2
+ 2037  ls -a /var/run/libvirt/libvirt-sock
+ 2038  ls -la /var/run/libvirt/libvirt-sock
+ 2039  chmod 777 /var/run/libvirt/libvirt-sock
+ 2040  sudo chmod 777 /var/run/libvirt/libvirt-sock
+ 2041  minikube start --vm-driver=kvm2
+ 2042  sudo minikube start --vm-driver=kvm2
+ 2043  sudo minikube start --vm-driver=none
+ 2044* sudo minikube delete 
+ 2045  sudo minikube start --vm-driver=virtualbox
+ 2046  minikube start --vm-driver=virtualbox
+ 2047  sudo apt-get install virtualbox-dkms
+ 2048  minikube start --vm-driver=virtualbox
+ 2049  minikube start --vm-driver=kvm2
+ 2050  kubectl
+ 2051  chmod 777 /home/gc/.kube/config
+ 2052  sudo chmod 777 /home/gc/.kube/config
+ 2053  minikube start --vm-driver=kvm2
+ 2054  chmod 777 /home/gc/.minikube/ -r
+ 2055  chmod 777 /home/gc/.minikube/ -R
+ 2056  sudo chmod 777 /home/gc/.minikube/ -R
+ 2057  minikube start --vm-driver=kvm2
+ 2058  history
+```
+
+Left at #01-009,010,011,012
+Stopped at #
